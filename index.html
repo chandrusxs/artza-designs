@@ -10,273 +10,205 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
             line-height: 1.6;
+            color: #333;
+            width: 100%;
+            height: 100vh;
             overflow-x: hidden;
         }
-        
+
         /* Navigation */
         nav {
-            position: fixed;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 5%;
+            position: sticky;
             top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
+
         .logo {
-            font-size: 1.8rem;
+            color: white;
+            font-size: 2rem;
             font-weight: bold;
-            color: #00ffff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-decoration: none;
         }
-        
+
         .nav-links {
+            list-style: none;
             display: flex;
             gap: 2rem;
-            list-style: none;
+            justify-content: flex-end;
+            margin-top: -2.5rem;
         }
-        
+
         .nav-links a {
-            color: #ffffff;
+            color: white;
             text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
+            transition: opacity 0.3s;
         }
-        
+
         .nav-links a:hover {
-            color: #00ffff;
+            opacity: 0.8;
         }
-        
+
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 5%;
             text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            position: relative;
-            overflow: hidden;
+            width: 100%;
         }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
+
+        .hero-content h1 {
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
         }
-        
-        .hero .highlight {
-            color: #00ffff;
-            display: block;
-            margin-top: 0.5rem;
+
+        .highlight {
+            color: #ffd700;
         }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: #cccccc;
-            margin: 1.5rem 0 2rem;
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
+
         .cta-button {
             display: inline-block;
+            background: white;
+            color: #667eea;
             padding: 1rem 2.5rem;
-            background: #00ffff;
-            color: #0a0a0a;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: all 0.3s;
-            border: 2px solid #00ffff;
+            transition: transform 0.3s;
         }
-        
+
         .cta-button:hover {
-            background: transparent;
-            color: #00ffff;
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
         }
-        
+
         /* Services Section */
         .services {
             padding: 5rem 5%;
-            background: #0a0a0a;
+            background: #f8f9fa;
+            width: 100%;
         }
-        
+
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 3rem;
+            color: #333;
         }
-        
-        .section-title .highlight {
-            color: #00ffff;
-        }
-        
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .service-card {
-            background: #1a1a1a;
+            background: white;
             padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            transition: all 0.3s;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
-            border-color: #00ffff;
-            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
         }
-        
+
         .service-card h3 {
-            color: #00ffff;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .service-card p {
-            color: #cccccc;
-            font-size: 1rem;
+            color: #666;
         }
-        
+
         /* About Section */
         .about {
             padding: 5rem 5%;
-            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);
+            width: 100%;
         }
-        
+
         .about-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
         }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-text p {
-            color: #cccccc;
+
+        .about-text h3 {
+            font-size: 2rem;
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            color: #667eea;
         }
-        
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
         /* Contact Section */
         .contact {
             padding: 5rem 5%;
-            background: #0a0a0a;
+            background: #f8f9fa;
+            width: 100%;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
         }
-        
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
+
+        .contact-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
-        
+
         .contact-info {
-            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
         }
-        
-        .contact-item {
-            margin: 1.5rem 0;
-            padding: 1.5rem;
-            background: #1a1a1a;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
-        
+
         .contact-item h3 {
-            color: #00ffff;
             margin-bottom: 0.5rem;
+            color: #667eea;
         }
-        
-        .contact-item p {
-            color: #cccccc;
-        }
-        
+
         .contact-item a {
-            color: #00ffff;
+            color: #667eea;
             text-decoration: none;
         }
-        
+
         .contact-item a:hover {
             text-decoration: underline;
         }
-        
+
         /* Footer */
         footer {
-            background: #000000;
-            padding: 2rem 5%;
+            background: #333;
+            color: white;
             text-align: center;
-            border-top: 1px solid rgba(0, 255, 255, 0.2);
-        }
-        
-        footer p {
-            color: #666666;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+            padding: 2rem 5%;
+            width: 100%;
         }
     </style>
 </head>
@@ -295,7 +227,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Crafting Digital<span class="highlight">Masterpieces</span></h1>
+            <h1>Crafting Digital <span class="highlight">Masterpieces</span></h1>
             <p>We transform your vision into stunning digital experiences that captivate, engage, and inspire extraordinary results.</p>
             <a href="#contact" class="cta-button">Start Your Project</a>
         </div>
@@ -306,28 +238,76 @@
         <h2 class="section-title">Our <span class="highlight">Services</span></h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>Web Design</h3>
-                <p>Beautiful, responsive websites that capture your brand's essence and engage your audience.</p>
+                <h3>🎨</h3>
+                <p>Logo Design</p>
             </div>
             <div class="service-card">
-                <h3>Brand Identity</h3>
-                <p>Comprehensive branding solutions that make your business stand out in the digital landscape.</p>
+                <h3>📖</h3>
+                <p>Book Cover</p>
             </div>
             <div class="service-card">
-                <h3>UI/UX Design</h3>
-                <p>Intuitive user interfaces and seamless experiences that delight your users.</p>
+                <h3>📄</h3>
+                <p>Letterheads</p>
             </div>
             <div class="service-card">
-                <h3>Digital Marketing</h3>
-                <p>Strategic campaigns that boost your online presence and drive real results.</p>
+                <h3>📊</h3>
+                <p>Infographics</p>
             </div>
             <div class="service-card">
-                <h3>Content Creation</h3>
-                <p>Compelling content that tells your story and connects with your audience.</p>
+                <h3>🖼️</h3>
+                <p>Ads / Web Graphics</p>
             </div>
             <div class="service-card">
-                <h3>Development</h3>
-                <p>Robust web applications built with cutting-edge technologies and best practices.</p>
+                <h3>📋</h3>
+                <p>Flyer / Poster</p>
+            </div>
+            <div class="service-card">
+                <h3>📖</h3>
+                <p>Brochures</p>
+            </div>
+            <div class="service-card">
+                <h3>✉️</h3>
+                <p>Email Template</p>
+            </div>
+            <div class="service-card">
+                <h3>🎯</h3>
+                <p>Banners</p>
+            </div>
+            <div class="service-card">
+                <h3>📱</h3>
+                <p>Social Covers / Posts</p>
+            </div>
+            <div class="service-card">
+                <h3>🔄</h3>
+                <p>Vector Tracing</p>
+            </div>
+            <div class="service-card">
+                <h3>✏️</h3>
+                <p>Illustration</p>
+            </div>
+            <div class="service-card">
+                <h3>💼</h3>
+                <p>Business Card</p>
+            </div>
+            <div class="service-card">
+                <h3>🖼️</h3>
+                <p>Thumbnail</p>
+            </div>
+            <div class="service-card">
+                <h3>🏷️</h3>
+                <p>Branding</p>
+            </div>
+            <div class="service-card">
+                <h3>📸</h3>
+                <p>Photo Editing</p>
+            </div>
+            <div class="service-card">
+                <h3>🎬</h3>
+                <p>Video Editing</p>
+            </div>
+            <div class="service-card">
+                <h3>🍽️</h3>
+                <p>Menu Card</p>
             </div>
         </div>
     </section>
@@ -335,9 +315,9 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-content">
+            <h2 class="section-title">About <span class="highlight">Us</span></h2>
             <div class="about-text">
-                <h2>About <span class="highlight">ArtZa Designs</span></h2>
-                <p>We are a passionate team of designers and developers dedicated to creating exceptional digital experiences that drive results.</p>
+                <h3>Who We Are</h3>
                 <p>With years of experience and a commitment to excellence, we transform brands and businesses through innovative design and cutting-edge technology.</p>
             </div>
             <div class="about-text">
