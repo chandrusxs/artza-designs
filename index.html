@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700;900&family=Tomorrow:wght@700&display=swap" rel="stylesheet">
     <title>ArtZa Designs - Crafting Digital Masterpieces</title>
     <style>
         * {
@@ -12,29 +15,31 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #053937;
             width: 100%;
             height: 100vh;
             overflow-x: hidden;
+            background: #000000;
         }
 
         /* Navigation */
         nav {
-            background: linear-gradient(135deg, #053937 0%, #000000 100%);
+            background: #000000;
             padding: 1rem 5%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(5,57,55,0.3);
         }
 
         .logo {
-            color: white;
+            color: #053937;
             font-size: 2rem;
             font-weight: bold;
             text-decoration: none;
+            font-family: 'Tomorrow', sans-serif;
         }
 
         .nav-links {
@@ -46,27 +51,30 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #053937;
             text-decoration: none;
             transition: opacity 0.3s;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #053937 0%, #000000 100%);
-            color: white;
+            background: #000000;
+            color: #053937;
             padding: 8rem 5%;
             text-align: center;
             width: 100%;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
         }
 
         .highlight {
@@ -83,8 +91,8 @@
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #053937;
+            background: #053937;
+            color: white;
             padding: 1rem 2.5rem;
             text-decoration: none;
             border-radius: 50px;
@@ -99,15 +107,17 @@
         /* Services Section */
         .services {
             padding: 5rem 5%;
-            background: #f8f9fa;
+            background: #000000;
             width: 100%;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #053937;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
         }
 
         .services-grid {
@@ -119,12 +129,13 @@
         }
 
         .service-card {
-            background: white;
+            background: #1a1a1a;
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(5,57,55,0.2);
             transition: transform 0.3s;
+            border: 1px solid #053937;
         }
 
         .service-card:hover {
@@ -137,13 +148,15 @@
         }
 
         .service-card p {
-            color: #666;
+            color: #053937;
+            font-weight: 600;
         }
 
         /* About Section */
         .about {
             padding: 5rem 5%;
             width: 100%;
+            background: #000000;
         }
 
         .about-content {
@@ -155,18 +168,19 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: #053937;
+            font-family: 'Playfair Display', serif;
         }
 
         .about-text p {
             font-size: 1.1rem;
-            color: #666;
+            color: #053937;
             margin-bottom: 1rem;
         }
 
         /* Contact Section */
         .contact {
             padding: 5rem 5%;
-            background: #f8f9fa;
+            background: #000000;
             width: 100%;
         }
 
@@ -179,6 +193,7 @@
         .contact-content p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            color: #053937;
         }
 
         .contact-info {
@@ -191,6 +206,7 @@
         .contact-item h3 {
             margin-bottom: 0.5rem;
             color: #053937;
+            font-family: 'Playfair Display', serif;
         }
 
         .contact-item a {
@@ -202,13 +218,18 @@
             text-decoration: underline;
         }
 
+        .contact-item p {
+            color: #053937;
+        }
+
         /* Footer */
         footer {
-            background: #333;
-            color: white;
+            background: #000000;
+            color: #053937;
             text-align: center;
             padding: 2rem 5%;
             width: 100%;
+            border-top: 1px solid #053937;
         }
     </style>
 </head>
