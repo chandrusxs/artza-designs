@@ -1,384 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700;900&family=Tomorrow:wght@700&display=swap" rel="stylesheet">
-    <title>ArtZa Designs - Crafting Digital Masterpieces</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #ffffff;
-            width: 100%;
-            height: 100vh;
-            overflow-x: hidden;
-            background: #000000;
-        }
-
-        /* Navigation */
-        nav {
-            background: #000000;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(5,57,55,0.3);
-        }
-
-        .logo {
-            color: #0f9e99;
-            font-size: 2rem;
-            font-weight: bold;
-            text-decoration: none;
-            font-family: 'Tomorrow', sans-serif;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            justify-content: flex-end;
-            margin-top: -2.5rem;
-        }
-
-        .nav-links a {
-            color: #0f9e99;
-            text-decoration: none;
-            transition: opacity 0.3s;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.7;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #000000;
-            color: #0f9e99;
-            padding: 8rem 5%;
-            text-align: center;
-            width: 100%;
-        }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-        }
-
-        .highlight {
-            color: #ffffff;
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #0f9e99;
-            color: white;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 5%;
-            background: #000000;
-            width: 100%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            color: #0f9e99;
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(5,57,55,0.2);
-            transition: transform 0.3s;
-            border: 1px solid #0f9e99;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: #0f9e99;
-            font-weight: 600;
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 5%;
-            width: 100%;
-            background: #000000;
-        }
-
-        .about-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #0f9e99;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: #0f9e99;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 5%;
-            background: #000000;
-            width: 100%;
-        }
-
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #0f9e99;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item h3 {
-            margin-bottom: 0.5rem;
-            color: #0f9e99;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .contact-item a {
-            color: #0f9e99;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-item p {
-            color: #0f9e99;
-        }
-
-        /* Footer */
-        footer {
-            background: #000000;
-            color: #0f9e99;
-            text-align: center;
-            padding: 2rem 5%;
-            width: 100%;
-            border-top: 1px solid #0f9e99;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700;900&family=Tomorrow:wght@700&display=swap" rel="stylesheet">
+  <title>ArtZa Designs - Crafting Digital Masterpieces</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      background: #000000;
+    }
+    /* Navigation */
+    nav {
+      background: #000000;
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(5,57,55,0.3);
+    }
+    .logo {
+      color: #0f9e99;
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Tomorrow', sans-serif;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-end;
+      margin-top: -2.5rem;
+    }
+    .nav-links a {
+      color: #0f9e99;
+      text-decoration: none;
+      transition: opacity 0.3s;
+      font-weight: 600;
+    }
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+    /* Hero Section */
+    .hero {
+      background: #000000;
+      color: #0f9e99;
+      padding: 8rem 5%;
+      text-align: center;
+      width: 100%;
+    }
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+    }
+    .highlight {
+      color: #ffffff;
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #0f9e99;
+      color: white;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+    }
+    /* Services Section */
+    .services {
+      padding: 5rem 5%;
+      background: #000000;
+      width: 100%;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #0f9e99;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(5,57,55,0.2);
+      transition: transform 0.3s;
+      border: 1px solid #0f9e99;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .service-card h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .service-card p {
+      color: #0f9e99;
+      font-weight: 600;
+    }
+    /* About Section */
+    .about {
+      padding: 5rem 5%;
+      width: 100%;
+      background: #000000;
+    }
+    .about-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .about-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #ffffff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+    }
+    .about-title .highlight {
+      color: #0f9e99;
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .about-column {
+      text-align: center;
+    }
+    .about-column h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0f9e99;
+      font-family: 'Playfair Display', serif;
+    }
+    .about-column p {
+      font-size: 1.1rem;
+      color: #0f9e99;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+    .mission-points {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .mission-points p {
+      font-size: 1rem;
+      color: #0f9e99;
+      margin: 0.8rem 0;
+    }
+    /* Contact Section */
+    .contact {
+      padding: 5rem 5%;
+      background: #000000;
+      width: 100%;
+    }
+    .contact-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #0f9e99;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .contact-item h3 {
+      margin-bottom: 0.5rem;
+      color: #0f9e99;
+      font-family: 'Playfair Display', serif;
+    }
+    .contact-item a {
+      color: #0f9e99;
+      text-decoration: none;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+    .contact-item p {
+      color: #0f9e99;
+    }
+    /* Footer */
+    footer {
+      background: #000000;
+      color: #0f9e99;
+      text-align: center;
+      padding: 2rem 5%;
+      width: 100%;
+      border-top: 1px solid #0f9e99;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">ARTZA</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">ARTZA</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Crafting Digital <span class="highlight">Masterpieces</span></h1>
-            <p>We transform your vision into stunning digital experiences that captivate, engage, and inspire extraordinary results.</p>
-            <a href="#contact" class="cta-button">Start Your Project</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Crafting Digital <span class="highlight">Masterpieces</span></h1>
+      <p>We transform your vision into stunning digital experiences that captivate, engage, and inspire extraordinary results.</p>
+      <a href="#contact" class="cta-button">Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>🎨</h3>
+        <p>Logo Design</p>
+      </div>
+      <div class="service-card">
+        <h3>📖</h3>
+        <p>Book Cover</p>
+      </div>
+      <div class="service-card">
+        <h3>📄</h3>
+        <p>Letterheads</p>
+      </div>
+      <div class="service-card">
+        <h3>📊</h3>
+        <p>Infographics</p>
+      </div>
+      <div class="service-card">
+        <h3>🖼️</h3>
+        <p>Ads / Web Graphics</p>
+      </div>
+      <div class="service-card">
+        <h3>📋</h3>
+        <p>Flyer / Poster</p>
+      </div>
+      <div class="service-card">
+        <h3>📖</h3>
+        <p>Brochures</p>
+      </div>
+      <div class="service-card">
+        <h3>✉️</h3>
+        <p>Email Template</p>
+      </div>
+      <div class="service-card">
+        <h3>🎯</h3>
+        <p>Banners</p>
+      </div>
+      <div class="service-card">
+        <h3>📱</h3>
+        <p>Social Covers / Posts</p>
+      </div>
+      <div class="service-card">
+        <h3>🔄</h3>
+        <p>Vector Tracing</p>
+      </div>
+      <div class="service-card">
+        <h3>✏️</h3>
+        <p>Illustration</p>
+      </div>
+      <div class="service-card">
+        <h3>💼</h3>
+        <p>Business Card</p>
+      </div>
+      <div class="service-card">
+        <h3>🖼️</h3>
+        <p>Thumbnail</p>
+      </div>
+      <div class="service-card">
+        <h3>🏷️</h3>
+        <p>Branding</p>
+      </div>
+      <div class="service-card">
+        <h3>📸</h3>
+        <p>Photo Editing</p>
+      </div>
+      <div class="service-card">
+        <h3>🎬</h3>
+        <p>Video Editing</p>
+      </div>
+      <div class="service-card">
+        <h3>🍽️</h3>
+        <p>Menu Card</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-wrapper">
+      <h2 class="about-title">About <span class="highlight">ArtZa Designs</span></h2>
+      <div class="about-content">
+        <div class="about-column">
+          <h3>Our Story</h3>
+          <p>Founded in 2019, ArtZa Designs emerged from a simple vision: to bridge the gap between creative design and cutting-edge technology. What started as a small team of passionate designers has grown into a full-service digital agency.</p>
+          <p>We believe that great design is not just about aesthetics—it's about creating meaningful connections between brands and their audiences through thoughtful, user-centered experiences.</p>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2 class="section-title">Our <span class="highlight">Services</span></h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🎨</h3>
-                <p>Logo Design</p>
-            </div>
-            <div class="service-card">
-                <h3>📖</h3>
-                <p>Book Cover</p>
-            </div>
-            <div class="service-card">
-                <h3>📄</h3>
-                <p>Letterheads</p>
-            </div>
-            <div class="service-card">
-                <h3>📊</h3>
-                <p>Infographics</p>
-            </div>
-            <div class="service-card">
-                <h3>🖼️</h3>
-                <p>Ads / Web Graphics</p>
-            </div>
-            <div class="service-card">
-                <h3>📋</h3>
-                <p>Flyer / Poster</p>
-            </div>
-            <div class="service-card">
-                <h3>📖</h3>
-                <p>Brochures</p>
-            </div>
-            <div class="service-card">
-                <h3>✉️</h3>
-                <p>Email Template</p>
-            </div>
-            <div class="service-card">
-                <h3>🎯</h3>
-                <p>Banners</p>
-            </div>
-            <div class="service-card">
-                <h3>📱</h3>
-                <p>Social Covers / Posts</p>
-            </div>
-            <div class="service-card">
-                <h3>🔄</h3>
-                <p>Vector Tracing</p>
-            </div>
-            <div class="service-card">
-                <h3>✏️</h3>
-                <p>Illustration</p>
-            </div>
-            <div class="service-card">
-                <h3>💼</h3>
-                <p>Business Card</p>
-            </div>
-            <div class="service-card">
-                <h3>🖼️</h3>
-                <p>Thumbnail</p>
-            </div>
-            <div class="service-card">
-                <h3>🏷️</h3>
-                <p>Branding</p>
-            </div>
-            <div class="service-card">
-                <h3>📸</h3>
-                <p>Photo Editing</p>
-            </div>
-            <div class="service-card">
-                <h3>🎬</h3>
-                <p>Video Editing</p>
-            </div>
-            <div class="service-card">
-                <h3>🍽️</h3>
-                <p>Menu Card</p>
-            </div>
+        <div class="about-column">
+          <h3>Our Mission</h3>
+          <p>To empower businesses with innovative digital solutions that not only look stunning but also drive measurable results and create lasting impact.</p>
+          <div class="mission-points">
+            <p>• Innovation-driven approach</p>
+            <p>• Client-focused solutions</p>
+            <p>• Continuous learning and growth</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2 class="section-title">About <span class="highlight">Us</span></h2>
-<div class="about-text" style="text-align: center;">
-                <h3>Our Story</h3>
-                <p>
-                    Founded in 2019, ArtZa Designs emerged from a simple vision: to bridge the gap
-                    between creative design and cutting-edge technology. What started as a small
-                    team of passionate designers has grown into a full-service digital agency.
-                    <br><br>
-                    We believe that great design is not just about aesthetics—it's about creating
-                    meaningful connections between brands and their audiences through thoughtful,
-                    user-centered experiences.
-                    </p>
-            </div>
-            <div class="about-text">
-                <h3>Our Mission</h3>
-                <p>
-                    To empower businesses with innovative digital solutions that not only look
-                    stunning but also drive measurable results and create lasting impact.
-                    <br><br>
-                    . Innovation-driven approach
-                    <br>
-                    . Client-focused solutions
-                    <br>
-                    . Continuous learning and growth
-                </p>
-            </div>
-            </div>
-            <div class="about-text">
-l
-                <div class="contact-item">
-                    <h3>Follow Us</h3>
-                    <p>Connect with us on social media</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 ArtZa Designs. All rights reserved. | Crafted with passion</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ArtZa Designs. All rights reserved. | Crafted with passion</p>
+  </footer>
 </body>
 </html>
